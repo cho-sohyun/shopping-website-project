@@ -1,0 +1,72 @@
+* {
+  font-family: "SUIT-Regular", sans-serif;
+}
+.navbar-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 상단 바: customer service + login */
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 20px 0;
+  font-size: 14px;
+}
+
+.customer-service-list {
+  display: flex;
+  gap: 15px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.login-button {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+  padding-right: 20px;
+}
+
+/* 로고 */
+.logo-section {
+  display: flex;
+  justify-content: center;
+  padding: 0 0 10px;
+}
+
+/* 메뉴 + 검색 */
+.menu-section {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.menu-list {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+  font-weight: bold;
+  justify-content: center;
+}
+
+.search-section {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 8px;
+  margin-right: 10px;
+}
+
+.search-section input {
+  border: none;
+  border-bottom: 1px solid #ccc;
+  background: transparent;
+  outline: none;
+}
