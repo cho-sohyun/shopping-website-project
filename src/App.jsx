@@ -4,7 +4,6 @@ import { useEffect, useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import ProductAll from "./page/ProductAll";
 import Login from "./page/Login";
-import ProductDetail from "./page/ProductDetail";
 import Navbar from "./component/Navbar";
 import PrivateRoute from "./route/PrivateRoute";
 import Banner from "./component/Banner";
