@@ -1,13 +1,30 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
+import Badge from "react-bootstrap/Badge";
 
 const ProductCard = ({ item }) => {
+  const navigate = useNavigate();
+  const showDetail = () => {
+    navigate(`/product/${item?.id}`);
+  };
   return (
-    <div className="product-card">
+    <div className="product-card" onClick={showDetail}>
       <img src={item?.img} />
-      <div>{item?.choice === true ? "컨셔스초이스" : ""}</div>
+      <div className="product-badges">
+        {item?.new && (
+          <Badge pill bg="danger" className="small-badge">
+            new
+          </Badge>
+        )}
+        {item?.choice && (
+          <Badge pill bg="success" className="small-badge">
+            컨셔스초이스
+          </Badge>
+        )}
+      </div>
+
       <div>{item?.title}</div>
-      <div>₩{item?.price}</div>
-      <div>{item?.new === true ? "신제품" : ""}</div>
+      <div>₩{item?.price?.toLocaleString()}</div>
     </div>
   );
 };
